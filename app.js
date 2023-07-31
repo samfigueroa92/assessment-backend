@@ -1,7 +1,10 @@
 const express = require('express');
 const data = require('./data/data.json');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.status(200).json({ data: 'Service is running!'});
